@@ -1,0 +1,30 @@
+int led9 = 9;
+int led10 = 10;
+int led11 = 11;
+void setup() {
+  Serial.begin(9600);
+  pinMode(led9,OUTPUT);
+  pinMode(led10,OUTPUT);
+  pinMode(led11,OUTPUT);
+}
+
+void loop() {
+  int temp = analogRead(A0);
+  Serial.println(temp);
+  if(temp>500 && temp <530){
+    digitalWrite(led9,HIGH);
+    digitalWrite(led10,LOW);
+    digitalWrite(led11,LOW);
+  }
+  if(temp>680 && temp <690){
+    digitalWrite(led9,LOW);
+    digitalWrite(led10,HIGH);
+    digitalWrite(led11,LOW);
+  }
+  if(temp>760 && temp <800){
+    digitalWrite(led9,LOW);
+    digitalWrite(led10,LOW);
+    digitalWrite(led11,HIGH);
+  }
+  
+} 
