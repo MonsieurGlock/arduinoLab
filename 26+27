@@ -1,0 +1,23 @@
+int led9 = 9;
+int led10 = 10;
+int led11 = 11;
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(led9,OUTPUT);
+  pinMode(led10,OUTPUT);
+  pinMode(led11,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+int temp = analogRead(A1);
+  Serial.println(temp);
+  if(temp < 800){
+    digitalWrite(led9,HIGH);
+  }
+  else{digitalWrite(led9,LOW);
+  }
+  
+}
