@@ -1,0 +1,23 @@
+int led10=10;
+int led9=9;
+int x,i,t;
+void setup() {
+  pinMode(led9 , OUTPUT);
+  pinMode(led10 , OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  
+     digitalWrite(led9,HIGH);
+     digitalWrite(led10,HIGH);
+     delay(500);
+     digitalWrite(led9,LOW);
+     delay(500);
+     digitalWrite(led9,HIGH);
+     digitalWrite(led10,LOW);
+     delay(500);
+     digitalWrite(led9,LOW);
+     delay(500);
+
+}
